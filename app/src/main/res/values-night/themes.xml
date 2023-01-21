@@ -2,9 +2,9 @@
     <!-- Base application theme. -->
     <style name="Theme.HousingMember" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/sugar_white</item>
+        <item name="colorPrimary">@color/dark_pool</item>
         <item name="colorPrimaryVariant">@color/faze_sea</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnPrimary">@color/old_ice</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/special_gray</item>
         <item name="colorSecondaryVariant">@color/s_oldIce</item>

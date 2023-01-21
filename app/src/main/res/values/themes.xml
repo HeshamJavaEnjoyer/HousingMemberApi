@@ -4,7 +4,7 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/dark_pool</item>
         <item name="colorPrimaryVariant">@color/far_sky</item>
-        <item name="colorOnPrimary">@color/golden_yellow</item>
+        <item name="colorOnPrimary">@color/sugar_white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/old_ice</item>
         <item name="colorSecondaryVariant">@color/far_sky</item>
