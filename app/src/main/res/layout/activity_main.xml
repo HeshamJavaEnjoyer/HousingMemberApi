@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/faze_sea"
+    tools:context=".views.MainActivity">
+    <!--GuideLines-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_top_start_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_start_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_end_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+    <!--GuideLines-->
+
+
+    <TextView
+        android:id="@+id/welcome_title"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_margin="5dp"
+
+        android:background="@drawable/empty_bac_1"
+        android:gravity="center"
+        android:text="@string/advertisement"
+        android:textAlignment="center"
+        android:textColor="@color/golden_yellow"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/recycler_adv"
+        app:layout_constraintEnd_toEndOf="@id/vertical_end_guide"
+        app:layout_constraintStart_toStartOf="@id/vertical_start_guide"
+        app:layout_constraintTop_toTopOf="@id/horizontal_top_start_guide" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_adv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:background="@color/dark_pool"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:layout_constraintEnd_toEndOf="@id/vertical_end_guide"
+        app:layout_constraintStart_toStartOf="@id/vertical_start_guide"
+        app:layout_constraintTop_toBottomOf="@id/welcome_title"
+        tools:itemCount="6"
+        tools:listitem="@layout/item_advertisement" />
+
+
+    <TextView
+        android:id="@+id/category_title"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/empty_bac_1"
+        android:gravity="center"
+        android:text="@string/categories"
+        android:textAlignment="center"
+        android:textColor="@color/golden_yellow"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/recycler_categories"
+        app:layout_constraintEnd_toEndOf="@id/vertical_end_guide"
+        app:layout_constraintStart_toStartOf="@id/vertical_start_guide"
+        app:layout_constraintTop_toBottomOf="@id/recycler_adv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_categories"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:background="@color/dark_pool"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:layout_constraintEnd_toEndOf="@id/vertical_end_guide"
+        app:layout_constraintStart_toStartOf="@id/vertical_start_guide"
+        app:layout_constraintTop_toBottomOf="@id/category_title"
+        tools:itemCount="6"
+        tools:listitem="@layout/item_category" />
+
+
+    <!--View For Bad Internet    -->
+    <View
+        android:id="@+id/view_badInternet"
+        android:layout_width="170dp"
+        android:layout_height="140dp"
+        android:background="@drawable/ic_wifi_off"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/recycler_adv"
+        app:layout_constraintEnd_toEndOf="@id/recycler_adv"
+        app:layout_constraintStart_toStartOf="@id/recycler_adv"
+        app:layout_constraintTop_toTopOf="@id/recycler_adv" />
+    <!--View For Loading Internet    -->
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressBar_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="visible"
+        app:indicatorColor="@color/sugar_white"
+        app:indicatorSize="40dp"
+        app:layout_constraintBottom_toBottomOf="@id/recycler_adv"
+        app:layout_constraintEnd_toEndOf="@id/vertical_end_guide"
+        app:layout_constraintStart_toStartOf="@id/vertical_start_guide"
+        app:layout_constraintTop_toTopOf="@id/recycler_adv"
+        app:trackColor="@color/fade_black"
+        app:trackCornerRadius="8dp"
+        app:trackThickness="4dp" />
+
+
+    <!--FOR THE SNACK_BAR-->
+    <View
+        android:id="@+id/snackBar_action"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

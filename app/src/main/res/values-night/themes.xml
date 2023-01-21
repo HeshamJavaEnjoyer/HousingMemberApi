@@ -1,0 +1,19 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.HousingMember" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/sugar_white</item>
+        <item name="colorPrimaryVariant">@color/faze_sea</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/special_gray</item>
+        <item name="colorSecondaryVariant">@color/s_oldIce</item>
+        <item name="colorOnSecondary">@color/shiny_red</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/dark_pool</item>
+        <!-- Customize your theme here. -->
+
+        <item name="fontFamily">@font/sans_ara_semi_bold</item>
+
+    </style>
+</resources>
